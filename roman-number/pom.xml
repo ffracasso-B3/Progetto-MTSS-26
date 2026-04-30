@@ -71,5 +71,27 @@
         </plugin>
       </plugins>
     </pluginManagement>
+     <!-- configurazione plugin checkstyle -->
+    <plugins>
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.3.1</version>
+        <configuration>
+          <failsOnError>true</failsOnError>
+          <configLocation>checkstyle.xml</configLocation>
+          <consoleOutput>true</consoleOutput>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>checkstyle</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+   </plugins>
+    <!-- -->
   </build>
 </project>
