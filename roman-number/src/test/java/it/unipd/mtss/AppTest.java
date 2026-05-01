@@ -61,10 +61,4 @@ public class AppTest
         IntegerToRoman.convert(1001);
     }
     
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
-    
 }
