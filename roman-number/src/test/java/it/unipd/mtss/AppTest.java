@@ -60,5 +60,106 @@ public class AppTest
     public void shouldThrowForGreaterThan1000() { // non accetto numeri >1000 (da consegna)
         IntegerToRoman.convert(1001);
     }
+
+    // test per le asciart
+    
+    // verifico I (1) venga stampato correttamente in asciart
+    @Test
+    public void shouldPrintAscii_One() {
+      String expected = String.join(System.lineSeparator(), // System.lineSeparator è un metodo per separare le righe e rendere più leggibile il codice
+          " _____",
+          "|_   _|",
+          "  | |",
+          "  | |",
+          " _| |_",
+          "|_____|");
+
+      assertEquals(expected, RomanPrinter.print(1));
+    }
+
+    // verifico V (5) venga stampato correttamente in asciart
+    @Test
+    public void shouldPrintAscii_Five() {
+      String expected = String.join(System.lineSeparator(),
+          "__      __",
+          "\\ \\    / /",
+          " \\ \\  / /",
+          "  \\ \\/ /",
+          "   \\  /",
+          "    \\/");
+
+      assertEquals(expected, RomanPrinter.print(5));
+    }
+
+    // verifico X (10) venga stampato correttamente in asciart
+    @Test
+    public void shouldPrintAscii_Ten() {
+      String expected = String.join(System.lineSeparator(),
+          "__   __",
+          "\\ \\ / /",
+          " \\ V /",
+          " /   \\",
+          "/ /^\\ \\",
+          "\\/   \\/");
+
+      assertEquals(expected, RomanPrinter.print(10));
+    }
+
+    // verifico L (50) venga stampato correttamente in asciart
+    @Test
+    public void shouldPrintAscii_Fifty() {
+      String expected = String.join(System.lineSeparator(),
+          " _",
+          "| |",
+          "| |",
+          "| |",
+          "| |____",
+          "|______|");
+
+      assertEquals(expected, RomanPrinter.print(50));
+    }
+
+    // verifico C (100) venga stampato correttamente in asciart
+    @Test
+    public void shouldPrintAscii_Hundred() {
+      String expected = String.join(System.lineSeparator(),
+          "  _____",
+          " / ____|",
+          "| |",
+          "| |",
+          "| |____",
+          " \\_____|");
+  
+      assertEquals(expected, RomanPrinter.print(100));
+    }
+
+    // verifico D (500) venga stampato correttamente in asciart
+    @Test
+    public void shouldPrintAscii_FiveHundred() {
+      String expected = String.join(System.lineSeparator(),
+          " _____",
+          "|  __ \\",
+          "| |  | |",
+          "| |  | |",
+          "| |__| |",
+          "|_____/");
+
+          assertEquals(expected, RomanPrinter.print(500));
+    }
+
+    // verifico M (1000) venga stampato correttamente in asciart
+    @Test
+   public void shouldPrintAscii_OneThousand() {
+      String expected = String.join(System.lineSeparator(),
+          " __  __",
+          "|  \\/  |",
+          "| \\  / |",
+          "| |\\/| |",
+          "| |  | |",
+          "|_|  |_|");
+ 
+      assertEquals(expected, RomanPrinter.print(1000));
+    }
+
     
 }
