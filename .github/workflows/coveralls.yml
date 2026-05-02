@@ -19,3 +19,5 @@ jobs:
 
       - name: Submit Coveralls data
         run: mvn clean test jacoco:report coveralls:report 
+        with:
+         github-token: ${{ secrets.GITHUB_TOKEN }}
