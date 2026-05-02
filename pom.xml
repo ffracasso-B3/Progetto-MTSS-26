@@ -69,10 +69,12 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+       
       </plugins>
     </pluginManagement>
-     <!-- configurazione plugin checkstyle -->
+     
     <plugins>
+     <!-- configurazione plugin checkstyle -->
      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -91,6 +93,28 @@
           </execution>
         </executions>
       </plugin>
+      
+       <!-- configurazione plugin Coveralls -->
+       <plugin>
+          <groupId>com.github.hazendaz.maven</groupId>
+          <artifactId>coveralls-maven-plugin</artifactId>
+          <version>5.0.0</version>
+        </plugin>
+
+        <!-- configurazione plugin JaCoCo -->
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>0.8.14</version>
+          <executions>
+            <execution>
+              <id>prepare-agent</id>
+                <goals>
+                  <goal>prepare-agent</goal>
+                </goals>
+            </execution>
+          </executions>
+        </plugin>
    </plugins>
     <!-- -->
   </build>
