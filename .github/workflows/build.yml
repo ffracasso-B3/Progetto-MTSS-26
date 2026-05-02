@@ -21,7 +21,7 @@ jobs:
       - name: Compile project
         run: mvn -B compile
     
-      - name: Run tests
+      - name: Run unit tests
         run: mvn -B test
 
       - name: Package project
