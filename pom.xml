@@ -112,22 +112,22 @@
                 <goals>
                   <goal>prepare-agent</goal>
                 </goals>
+                <configuration>
+                <rules>
+                  <rule>
+                    <element>CLASS</element>
+                    <limits>
+                      <limit>
+                        <counter>LINE</counter>
+                        <value>COVEREDRATIO</value>
+                        <minimum>0.85</minimum>
+                      </limit>
+                    </limits>
+                  </rule>
+                </rules>
+              </configuration>
             </execution>
-          </executions>
-          <configuration>
-            <rules>
-              <rule>
-                <element>CLASS</element>
-                <limits>
-                  <limit>
-                    <counter>LINE</counter>
-                    <value>COVEREDRATIO</value>
-                    <minimum>0.85</minimum>
-                  </limit>
-                </limits>
-              </rule>
-            </rules>
-          </configuration>
+          </executions> 
         </plugin>
    </plugins>
     <!-- -->
