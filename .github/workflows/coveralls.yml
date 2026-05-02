@@ -19,3 +19,7 @@ jobs:
 
       - name: Submit Coveralls data
         run: mvn clean test jacoco:report coveralls:report -DrepoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
+      
+      - name: Fail on build failure
+        if: steps.build.outcome == 'failure'
+        run: exit 1
