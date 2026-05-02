@@ -18,6 +18,6 @@ jobs:
          cache: 'maven'
 
       - name: Install dependencies
-        run: mvn -B install
+        run: mvn -B clean install
       - name: Submit Coveralls data
         run: mvn clean test jacoco:report coveralls:report
