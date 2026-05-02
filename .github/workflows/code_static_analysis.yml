@@ -1,10 +1,10 @@
-name: Java CI pipeline
+name: Java CI static analysis
 
 on: 
-    [pull_request]
+    [push, pull_request]
 
-jobs:
-    build-project:
+jobs: 
+    static-analysis:
      runs-on: ubuntu-latest
 
      steps:
@@ -17,18 +17,9 @@ jobs:
          distribution: 'temurin'
          java-version: '8'
          cache: 'maven'
-
-      - name: Compile project
-        run: mvn -B compile
-    
-      - name: Run tests
-        run: mvn -B test
-
-      - name: Package project
-        run: mvn -B package
-
-      - name: Verify project
-        run: mvn -B verify
+      
+      - name: Run analysis
+        run: mvn checkstyle:checkstyle
 
       - name: Fail on build failure
         if: steps.build.outcome == 'failure'
