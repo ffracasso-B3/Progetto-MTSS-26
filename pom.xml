@@ -72,9 +72,10 @@
        
       </plugins>
     </pluginManagement>
-     <!-- configurazione plugin checkstyle -->
+     
     <plugins>
-     <!--<plugin>
+     <!-- configurazione plugin checkstyle -->
+     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>3.3.1</version>
@@ -91,14 +92,16 @@
             </goals>
           </execution>
         </executions>
-      </plugin>-->
+      </plugin>
       
-
+       <!-- configurazione plugin Coveralls -->
        <plugin>
           <groupId>com.github.hazendaz.maven</groupId>
           <artifactId>coveralls-maven-plugin</artifactId>
           <version>5.0.0</version>
         </plugin>
+
+        <!-- configurazione plugin JaCoCo -->
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
@@ -111,6 +114,20 @@
                 </goals>
             </execution>
           </executions>
+          <configuration>
+            <rules>
+              <rule>
+                <element>CLASS</element>
+                <limits>
+                  <limit>
+                    <counter>LINE</counter>
+                    <value>COVEREDRATIO</value>
+                    <minimum>0.85</minimum>
+                  </limit>
+                </limits>
+              </rule>
+            </rules>
+          </configuration>
         </plugin>
    </plugins>
     <!-- -->
