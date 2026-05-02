@@ -1,0 +1,28 @@
+name: Code coverage (Coveralls)
+on:     [push, pull_request]
+
+permissions: read-all
+
+jobs: 
+    coveralls:
+     runs-on: ubuntu-latest
+     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup JDK 21
+        uses: actions/setup-java@v4
+        with:
+         distribution: 'temurin'
+         java-version: '21'
+         cache: 'maven'
+
+      - name: Get Coveralls Maven Plugin Version
+        id: get_version
+        run: echo "PLUGIN_VERSION=$(./mvnw help:evaluate --quiet -Dexpression=project.version -DforceStdout)" >> $GITHUB_ENV
+        
+      - name: Report Coverage to Coveralls for General Push using current snapshot version
+        if: github.event_name == 'push'
+        run: ./mvnw generate-sources jacoco:report coveralls:report --batch-mode --no-transfer-progress -Dcoveralls.plugin=${{ env.PLUGIN_VERSION }} -DrepoToken=${{ env.GITHUB_TOKEN }} -DserviceName=github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
