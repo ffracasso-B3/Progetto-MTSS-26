@@ -115,7 +115,7 @@
                 <configuration>
                 <rules>
                   <rule>
-                    <element>ELEMENTS</element>
+                    <element>CLASS</element>
                     <limits>
                      <limit>
                         <counter>LINE</counter>
