@@ -17,5 +17,7 @@ jobs:
          java-version: '21'
          cache: 'maven'
 
+      - name: Install dependencies
+        run: mvn -B install
       - name: Submit Coveralls data
         run: mvn clean test jacoco:report coveralls:report
