@@ -19,7 +19,7 @@ jobs:
          cache: 'maven'
 
       - name: Compile project
-        run: mvn -B build --file pom.xml
+        run: mvn -B verify --file pom.xml
     
       - name: Fail on build failure
         if: steps.build.outcome == 'failure'
