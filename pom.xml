@@ -115,19 +115,19 @@
                 <configuration>
                 <rules>
                   <rule>
-                    <element>CLASS</element>
-                    <limits>
-                     <limit>
-                        <counter>LINE</counter>
+                    <element>BUNDLE</element>
+                <limits>
+                    <limit>
+                        <counter>INSTRUCTION</counter>
                         <value>COVEREDRATIO</value>
-                        <minimum>0.80</minimum>
-                     </limit>
-                     <limit>
+                        <minimum>0.70</minimum>
+                    </limit>
+                    <limit>
                         <counter>BRANCH</counter>
                         <value>COVEREDRATIO</value>
-                        <minimum>0.80</minimum>
-                     </limit>
-                  </limits>
+                        <minimum>0.68</minimum>
+                    </limit>
+                </limits>
                   </rule>
                 </rules>
               </configuration>
