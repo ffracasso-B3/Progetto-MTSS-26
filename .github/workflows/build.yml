@@ -7,9 +7,6 @@ jobs:
     build-project:
      runs-on: ubuntu-latest
 
-     permissions:
-      contents: write
-
      steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,7 +19,7 @@ jobs:
          cache: 'maven'
 
       - name: Compile project
-        run: mvn -B build 
+        run: mvn -B build --file pom.xml
     
       - name: Fail on build failure
         if: steps.build.outcome == 'failure'
