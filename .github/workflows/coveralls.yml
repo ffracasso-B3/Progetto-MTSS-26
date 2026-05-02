@@ -20,5 +20,5 @@ jobs:
       - name: Submit Coveralls data
         run: mvn clean test 
         
-      - run: jacoco:report 
-      - run: coveralls:report -DrepoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
+      - run: mvn jacoco:report 
+      - run: mvn coveralls:report -DrepoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
