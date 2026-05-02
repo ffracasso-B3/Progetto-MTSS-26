@@ -18,4 +18,4 @@ jobs:
          cache: 'maven'
 
       - name: Submit Coveralls data
-        run: mvn clean test jacoco:report coveralls:report -DrepoToken=wP2C8nvF3JdIFDDafERPlsDWEXkHulnqR
+        run: mvn clean test jacoco:report coveralls:report -DrepoToken=R2bDfxKWIw2vX5bVnkNSK3iflMci49ABE
