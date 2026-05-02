@@ -19,10 +19,10 @@ jobs:
 
       - name: Get Coveralls Maven Plugin Version
         id: get_version
-        run: echo "PLUGIN_VERSION=$(./mvnw help:evaluate --quiet -Dexpression=project.version -DforceStdout)" >> $GITHUB_ENV
-        
+        run: echo "PLUGIN_VERSION=$(mvn help:evaluate --quiet -Dexpression=project.version -DforceStdout)" >> $GITHUB_ENV
+
       - name: Report Coverage to Coveralls for General Push using current snapshot version
         if: github.event_name == 'push'
-        run: ./mvnw generate-sources jacoco:report coveralls:report --batch-mode --no-transfer-progress -Dcoveralls.plugin=${{ env.PLUGIN_VERSION }} -DrepoToken=${{ env.GITHUB_TOKEN }} -DserviceName=github
+        run: mvn generate-sources jacoco:report coveralls:report --batch-mode --no-transfer-progress -Dcoveralls.plugin=${{ env.PLUGIN_VERSION }} -DrepoToken=${{ env.GITHUB_TOKEN }} -DserviceName=github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
