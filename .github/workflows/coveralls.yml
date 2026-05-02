@@ -17,7 +17,5 @@ jobs:
          java-version: '21'
          cache: 'maven'
 
-      - name: Install dependencies
-        run: mvn -B clean install
       - name: Submit Coveralls data
-        run: mvn clean test jacoco:report coveralls:report
+        run: mvn clean test jacoco:report coveralls:report -DrepoToken=${{github.COVERALLS_REPO_TOKEN}}
