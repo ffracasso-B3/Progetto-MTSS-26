@@ -99,7 +99,7 @@
           <artifactId>coveralls-maven-plugin</artifactId>
           <version>5.0.0</version>
           <configuration>
-            <repoToken>${{ env.COVERALLS_REPO_TOKEN }}</repoToken>
+            <repoToken>${{ github.COVERALLS_REPO_TOKEN }}</repoToken>
           </configuration>
         </plugin>
         <plugin>
