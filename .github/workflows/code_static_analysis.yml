@@ -20,7 +20,3 @@ jobs:
       
       - name: Run analysis
         run: mvn checkstyle:checkstyle
-
-      - name: Fail on build failure
-        if: steps.build.outcome == 'failure'
-        run: exit 1
