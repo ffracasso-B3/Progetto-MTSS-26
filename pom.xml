@@ -106,7 +106,20 @@
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>0.8.14</version>
-          <configuration>
+          <executions>
+            <execution>
+              <id>prepare-agent</id>
+                <goals>
+                  <goal>prepare-agent</goal>
+                </goals>
+            </execution>
+            <execution>
+                        <id>report</id>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+              
+                <configuration>
                 <rules>
                   <rule>
                     <element>BUNDLE</element>
@@ -125,12 +138,6 @@
                   </rule>
                 </rules>
               </configuration>
-          <executions>
-            <execution>
-              <id>prepare-agent</id>
-                <goals>
-                  <goal>prepare-agent</goal>
-                </goals>
             </execution>
           </executions> 
         </plugin>
