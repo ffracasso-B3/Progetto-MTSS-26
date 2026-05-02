@@ -17,8 +17,5 @@ jobs:
          java-version: '21'
          cache: 'maven'
 
-      - name: Submit Coveralls data
-        run: mvn clean test 
-      - run: mvn jacoco:check@jacoco:check
-      - run: mvn jacoco:report
-      - run: mvn coveralls:report -DrepoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
+      - name: Run tests, generate JaCoCo report and then submit it to Coveralls.io
+        run: mvn clean test jacoco:report coveralls:report -DrepoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
