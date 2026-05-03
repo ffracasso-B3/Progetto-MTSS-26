@@ -13,7 +13,7 @@ public class RomanPrinterTest {
     
     @Test
     public void testPrinter() {
-        String I = RomanPrinter.print(1);
-        assertEquals(I, " _____ \n|_   _|\n  | |  \n  | |  \n _| |_ \n|_____|\n");
+        String i = RomanPrinter.print(1);
+        assertEquals(" _____ \n|_   _|\n  | |  \n  | |  \n _| |_ \n|_____|\n", i);
     }
 }

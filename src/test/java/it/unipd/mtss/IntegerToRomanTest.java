@@ -17,8 +17,8 @@ public class IntegerToRomanTest {
         String two = IntegerToRoman.convert(2);
         String three = IntegerToRoman.convert(3);
 
-        assertEquals(one, "I");
-        assertEquals(two, "II");
-        assertEquals(three, "III");
+        assertEquals("I", one);
+        assertEquals("II", two);
+        assertEquals("III", three);
     }
 }
