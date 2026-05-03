@@ -11,12 +11,12 @@ public class RomanPrinter {
     }
 
     private static String printAsciiArt(String romanNumber) {
-        StringBuilder asciiArt = new StringBuilder();
+        StringBuilder asciiPrint = new StringBuilder();
         
-        String availableCharacters = "I";
+        String numerals = "I";
 
-        // Rappresentazione come array bidimensionale delle art per i vari caratteri
-        String[][] asciiCharacters = {
+        // String array bidimensionale per le asciiart
+        String[][] asciiArts = {
             //Riga 1
             {
                 " _____ " // I
@@ -46,14 +46,15 @@ public class RomanPrinter {
 
         // Aggiungi una riga alla volta
         for(int i = 0; i < 6; i++) {
-            // Itera sulla String di numeri romani, aggiungendo la riga dell'art corrispondente al carattere attuale
+            // Itera su romanNumber, aggiunge riga art corrispondente al char
             for(int j = 0; j < romanNumber.length(); j++) {
-                asciiArt.append(asciiCharacters[i][availableCharacters.indexOf(romanNumber.charAt(j))]);
+                int charIndex =numerals.indexOf(romanNumber.charAt(j));
+                asciiPrint.append(asciiArts[i][charIndex]);
             }
             //Una volta finita una iterazione passa alla riga successiva
-            asciiArt.append("\n");
+            asciiPrint.append("\n");
         }
         
-        return asciiArt.toString();
+        return asciiPrint.toString();
     }
 }

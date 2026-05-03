@@ -48,10 +48,8 @@
     </module>
 
    <!-- modulo MethodLength -->
-   <!-- controlla la lunghezza massima del metodo -->
-    <module name="MethodLength">
-      <property name="max" value="15"/> <!-- impostato max 15: voglio un metodo semplice e breve (default sarebbe 150) -->
-    </module>
+   <!-- controlla la lunghezza massima del metodo (default è 150)-->
+    <module name="MethodLength"/>
 
    <!-- modulo EmptyCatchBlock -->
    <!-- controlla se ci sono blocchi catch vuoti -->
