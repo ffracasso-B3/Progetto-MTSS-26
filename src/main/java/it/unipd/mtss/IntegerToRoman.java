@@ -7,12 +7,12 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
     public static String convert(int number) {
-        String convertedNumber = "";
-        while(number > 1) {
-            convertedNumber += "I";
+        StringBuilder convertedNumber = new StringBuilder();
+        while(number > 0) {
+            convertedNumber.append("I");
             number -= 1;
         }
 
-        return convertedNumber;
+        return convertedNumber.toString();
     }
 }
