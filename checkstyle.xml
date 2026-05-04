@@ -15,8 +15,10 @@
 
 
  <!-- modulo LineLength -->
- <!-- controlla la lunghezza massima della riga (default è 80) -->
+ <!-- controlla la lunghezza massima della riga -->
   <module name="LineLength"/>
+     <property name="max" value="120"/> <!-- impostato a max 120 (default sarebbe 80) -->
+  </module>
 
 
  <!-- modulo FileTabCharacter -->
