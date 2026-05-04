@@ -16,6 +16,7 @@ public class IntegerToRomanTest {
         // simboli base
         assertEquals("I", IntegerToRoman.convert(1));
         assertEquals("V", IntegerToRoman.convert(5));
+        assertEquals("X", IntegerToRoman.convert(10));
 
         // casi additivi
         assertEquals ("II", IntegerToRoman.convert(2));
@@ -23,5 +24,6 @@ public class IntegerToRomanTest {
 
         //casi sottrattivi
         assertEquals("IV", IntegerToRoman.convert(4));
+        assertEquals("IX", IntegerToRoman.convert(9));
     }
 }

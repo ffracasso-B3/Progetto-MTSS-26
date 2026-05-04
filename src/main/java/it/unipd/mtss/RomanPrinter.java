@@ -13,17 +13,17 @@ public class RomanPrinter {
     private static String printAsciiArt(String romanNumber) {
         StringBuilder asciiPrint = new StringBuilder();
         
-        String numerals = "IV"; // supporta I e V
+        String numerals = "IVX"; // supporta I, V e X
 
         // String array bidimensionale per le asciiart
         String[][] asciiArts = {
 
-             { " _____ ", " _   _ " }, // riga 1: I, V
-             { "|_   _|", "| | | |" }, // riga 2
-             { "  | |  ", "| | | |" }, // riga 3
-             { "  | |  ", "| | | |" }, // riga 4
-             { " _| |_ ", " \\ V / " }, // riga 5
-             { "|_____|", "  \\_/  " }  // riga 6
+             { " _____ ", " _   _ ", "__   __" }, // riga 1: I, V, X
+             { "|_   _|", "| | | |", "\\ \\ / /" }, // riga 2
+             { "  | |  ", "| | | |", " \\ V / " }, // riga 3
+             { "  | |  ", "| | | |",  "  > <  "}, // riga 4
+             { " _| |_ ", " \\ V / ", " / . \\ " }, // riga 5
+             { "|_____|", "  \\_/  ", "/_/ \\_\\" }  // riga 6
             
         };
 
