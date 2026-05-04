@@ -13,12 +13,15 @@ public class IntegerToRomanTest {
     
     @Test
     public void testConvert() {
-        String one = IntegerToRoman.convert(1);
-        String two = IntegerToRoman.convert(2);
-        String three = IntegerToRoman.convert(3);
+        // simboli base
+        assertEquals("I", IntegerToRoman.convert(1));
+        assertEquals("V", IntegerToRoman.convert(5));
 
-        assertEquals("I", one);
-        assertEquals("II", two);
-        assertEquals("III", three);
+        // casi additivi
+        assertEquals ("II", IntegerToRoman.convert(2));
+        assertEquals ("VI", IntegerToRoman.convert(6));
+
+        //casi sottrattivi
+        assertEquals("IV", IntegerToRoman.convert(4));
     }
 }

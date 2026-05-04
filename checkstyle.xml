@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
-"http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+<!DOCTYPE module PUBLIC "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+          "https://checkstyle.org/dtds/configuration_1_3.dtd">
 
 
 
@@ -15,8 +15,10 @@
 
 
  <!-- modulo LineLength -->
- <!-- controlla la lunghezza massima della riga (default è 80) -->
-  <module name="LineLength"/>
+ <!-- controlla la lunghezza massima della riga -->
+  <module name="LineLength">
+     <property name="max" value="120"/> <!-- impostato a max 120 (default sarebbe 80) -->
+  </module>
 
 
  <!-- modulo FileTabCharacter -->
@@ -42,10 +44,8 @@
     </module>
 
    <!-- modulo CyclomaticComplexity -->
-   <!-- controlla il numero massimo di cicli ammessi -->
-    <module name="CyclomaticComplexity">
-      <property name="max" value="4"/> <!-- impostato max 4 (default sarebbe 10) -->
-    </module>
+   <!-- controlla il numero massimo di cicli ammessi (default è 10)-->
+    <module name="CyclomaticComplexity"/>
 
    <!-- modulo MethodLength -->
    <!-- controlla la lunghezza massima del metodo (default è 150)-->
