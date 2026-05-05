@@ -21,9 +21,29 @@ public class IntegerToRomanTest {
         // casi additivi
         assertEquals ("II", IntegerToRoman.convert(2));
         assertEquals ("VI", IntegerToRoman.convert(6));
+        assertEquals ("XI", IntegerToRoman.convert(11));
 
         //casi sottrattivi
         assertEquals("IV", IntegerToRoman.convert(4));
         assertEquals("IX", IntegerToRoman.convert(9));
     }
+
+    // verifico che l'eccezione sia lanciata per 0
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowForZero() { // lo 0 non esiste
+        IntegerToRoman.convert(0);
+    }
+
+    // verifico che l'eccezione sia lanciata per numeri negativi
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowForNegative() { // non accetto numeri negativi
+        IntegerToRoman.convert(-1);
+    }
+
+    // verifico che l'eccezione sia lanciata per numeri maggiori di 20
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowForGreaterThan20() { // non accetto numeri >1000 (da consegna)
+        IntegerToRoman.convert(21);
+    }
+
 }
