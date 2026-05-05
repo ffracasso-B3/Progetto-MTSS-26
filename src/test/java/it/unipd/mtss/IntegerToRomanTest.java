@@ -17,6 +17,7 @@ public class IntegerToRomanTest {
         assertEquals("I", IntegerToRoman.convert(1));
         assertEquals("V", IntegerToRoman.convert(5));
         assertEquals("X", IntegerToRoman.convert(10));
+        assertEquals("L", IntegerToRoman.convert(50));
 
         // casi additivi
         assertEquals ("II", IntegerToRoman.convert(2));
@@ -26,6 +27,8 @@ public class IntegerToRomanTest {
         //casi sottrattivi
         assertEquals("IV", IntegerToRoman.convert(4));
         assertEquals("IX", IntegerToRoman.convert(9));
+        assertEquals("XL", IntegerToRoman.convert(40));
+        assertEquals("XLIX", IntegerToRoman.convert(49));
     }
 
     // verifico che l'eccezione sia lanciata per 0
@@ -40,10 +43,10 @@ public class IntegerToRomanTest {
         IntegerToRoman.convert(-1);
     }
 
-    // verifico che l'eccezione sia lanciata per numeri maggiori di 20
+    // verifico che l'eccezione sia lanciata per numeri maggiori al massimo
     @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowForGreaterThan20() { // non accetto numeri >1000 (da consegna)
-        IntegerToRoman.convert(21);
+    public void shouldThrowForGreaterThanMax() { // non accetto numeri >1000 (da consegna)
+        IntegerToRoman.convert(51);
     }
 
 }
