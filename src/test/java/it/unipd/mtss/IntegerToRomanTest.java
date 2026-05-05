@@ -21,7 +21,7 @@ public class IntegerToRomanTest {
         // casi additivi
         assertEquals ("II", IntegerToRoman.convert(2));
         assertEquals ("VI", IntegerToRoman.convert(6));
-        assertEquals ("XI", IntegerToRoman.converto(11));
+        assertEquals ("XI", IntegerToRoman.convert(11));
 
         //casi sottrattivi
         assertEquals("IV", IntegerToRoman.convert(4));
