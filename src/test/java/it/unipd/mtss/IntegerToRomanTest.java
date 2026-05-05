@@ -36,7 +36,7 @@ public class IntegerToRomanTest {
         assertEquals("XLIX", IntegerToRoman.convert(49));
         assertEquals("XC", IntegerToRoman.convert(90));
         assertEquals("CD", IntegerToRoman.convert(400));
-        assertEquals("CM", IntegerToRoman.convert(900))
+        assertEquals("CM", IntegerToRoman.convert(900));
     }
 
     // verifico che l'eccezione sia lanciata per 0
