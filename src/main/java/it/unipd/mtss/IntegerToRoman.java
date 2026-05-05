@@ -10,7 +10,7 @@ public class IntegerToRoman {
 
         // PREcondizione
         if (number < 1 || number > 50) {
-        throw new IllegalArgumentException("Sono ammessi solo numeri da 1 a 20.");
+        throw new IllegalArgumentException("Sono ammessi solo numeri da 1 a 50.");
     }
         // stringa con i valori base e sottrattivi in int
         int[] values = {50, 40, 10, 9, 5, 4, 1}; 
