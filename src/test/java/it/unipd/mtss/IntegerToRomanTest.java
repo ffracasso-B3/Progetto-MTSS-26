@@ -48,8 +48,8 @@ public class IntegerToRomanTest {
 
     // verifico che l'eccezione sia lanciata per numeri maggiori al massimo
     @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowForGreaterThanMax() { // non accetto numeri >1000 (da consegna)
-        IntegerToRoman.convert(51);
+    public void shouldThrowForGreaterThanMax() { // non accetto numeri >100 (da consegna)
+        IntegerToRoman.convert(101);
     }
 
 }
