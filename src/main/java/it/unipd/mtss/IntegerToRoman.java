@@ -9,14 +9,14 @@ public class IntegerToRoman {
     public static String convert(int number) {
 
         // PREcondizione
-        if (number < 1 || number > 100) {
-        throw new IllegalArgumentException("Sono ammessi solo numeri da 1 a 100.");
+        if (number < 1 || number > 500) {
+        throw new IllegalArgumentException("Sono ammessi solo numeri da 1 a 500.");
     }
         // stringa con i valori base e sottrattivi in int
-        int[] values = {100, 90, 50, 40, 10, 9, 5, 4, 1}; 
+        int[] values = {500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}; 
 
         // stringa con i valori base e sottrattivi in roman
-        String[] symbols = {"C", "XC" , "L", "XL", "X", "IX", "V", "IV", "I"}; 
+        String[] symbols = {"D", "CD", "C", "XC" , "L", "XL", "X", "IX", "V", "IV", "I"}; 
 
         StringBuilder convertedNumber = new StringBuilder();
         

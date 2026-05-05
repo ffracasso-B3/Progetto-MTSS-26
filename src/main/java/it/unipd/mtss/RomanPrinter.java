@@ -13,17 +13,23 @@ public class RomanPrinter {
     private static String printAsciiArt(String romanNumber) {
         StringBuilder asciiPrint = new StringBuilder();
         
-        String numerals = "IVXLC"; // supporta I, V, X, L, C
+        String numerals = "IVXLCD"; // supporta I, V, X, L, C
 
         // String array bidimensionale per le asciiart
         String[][] asciiArts = {
 
-             { " _____ ", " _   _ ", "__   __", " _     ", "  _____"}, // riga 1: I, V, X, L, C
-             { "|_   _|", "| | | |", "\\ \\ / /", "| |    ", " / ____|"}, // riga 2
-             { "  | |  ", "| | | |", " \\ V / ", "| |    ", "| |" }, // riga 3
-             { "  | |  ", "| | | |",  "  > <  ", "| |    ", "| |"}, // riga 4
-             { " _| |_ ", " \\ V / ", " / . \\ ", "| |____ ", "| |____" }, // riga 5
-             { "|_____|", "  \\_/  ", "/_/ \\_\\", "|______|", " \\_____|" }  // riga 6
+             { " _____ ", " _   _ ", "__   __",         // riga 1: I, V, X, L, C, D
+                    " _      ", "  _____ ", " _____  "}, 
+             { "|_   _|", "| | | |", "\\ \\ / /",       // riga 2
+                    "| |     ", " / ____|", "|  __ \\ "}, 
+             { "  | |  ", "| | | |", " \\ V / ",        // riga 3
+                    "| |     ", "| |     ", "| |  | |" }, 
+             { "  | |  ", "| | | |",  "  > <  ",        // riga 4
+                    "| |     ", "| |     ", "| |  | |"}, 
+             { " _| |_ ", " \\ V / ", " / . \\ ",       // riga 5
+                    "| |____ ", "| |____ ", "| |__| |"}, 
+             { "|_____|", "  \\_/  ", "/_/ \\_\\",      // riga 6
+                    "|______|", " \\_____|", "|_____/ "}  
             
         };
 
