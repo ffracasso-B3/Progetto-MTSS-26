@@ -9,8 +9,8 @@ public class IntegerToRoman {
     public static String convert(int number) {
 
         // PREcondizione
-        if (number < 1 || number > 10) {
-        throw new IllegalArgumentException("Sono ammessi solo numeri da 1 a 10.");
+        if (number < 1 || number > 20) {
+        throw new IllegalArgumentException("Sono ammessi solo numeri da 1 a 20.");
     }
         // stringa con i valori base e sottrattivi in int
         int[] values = {10, 9, 5, 4, 1}; 
