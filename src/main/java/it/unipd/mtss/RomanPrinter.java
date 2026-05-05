@@ -13,7 +13,7 @@ public class RomanPrinter {
     private static String printAsciiArt(String romanNumber) {
         StringBuilder asciiPrint = new StringBuilder();
         
-        String numerals = "IVXLCD"; // supporta I, V, X, L, C e M
+        String numerals = "IVXLCDM"; // supporta I, V, X, L, C, D, M
 
         // String array bidimensionale per le asciiart
         String[][] asciiArts = {
